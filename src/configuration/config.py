@@ -4,6 +4,8 @@ from pathlib import Path
 # ==================== 项目根目录 ====================
 BASE_DIR = Path(__file__).parent.parent.parent
 
+print(str(BASE_DIR))
+
 medica_kd_path = BASE_DIR / 'data' / 'knowledge_graph'
 
 
@@ -31,8 +33,12 @@ VECTOR_STORE_DIR = BASE_DIR / "data/vectorstore"
 PRETRAINED_DIR = BASE_DIR / "pretrained"
 UIE_DIR = BASE_DIR / "uie_pytorch"
 
+WEB_STATIC_DIR = BASE_DIR / 'src' / 'web' / 'static'
+
 # 设备
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+API_KEY = 'sk-0bd2ccf8d7ba4157ae7c49f713b4af31'
 
 # 意图信息
 INTENT_INFO = {
